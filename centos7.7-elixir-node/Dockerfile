@@ -9,3 +9,6 @@ RUN bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 
 RUN asdf install nodejs ${NODE_VERSION}
 RUN asdf global nodejs ${NODE_VERSION}
+
+RUN npm set unsafe-perm true
+RUN npm install --global pm2
